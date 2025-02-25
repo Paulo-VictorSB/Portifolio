@@ -31,16 +31,12 @@ hr {
     border-radius: 50%;
 }
 
-h3 {
+h3, h5 {
     color: var(--destaque_or_botoes);
 }
 
 p {
     color: var(--texto_principal_fundo_escuro);
-}
-
-:root {
-    --destaque_or_botoes: #6a0dad;
 }
 
 ::-webkit-scrollbar {
@@ -63,4 +59,75 @@ p {
 
 .btn:hover {
     background-color: var(--links_bordas);
+}
+
+#container-carousel {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+}
+
+#carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+#row-carousel {
+    display: flex;
+    width: max-content; 
+    animation: scroll 20s linear infinite;
+}
+
+.carrossel-element {
+    flex: 0 0 auto;
+    width: 150px; 
+    padding: 0 10px;
+}
+
+.carrossel-element img {
+    width: 50%;
+    height: auto;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.card {
+    background-color: var(--principal);
+    color: white;
+}
+
+.technology-used {
+    color: var(--texto_secundario_hover);
+    background-color: rgba(0,0,0,0.1);
+    border: 1px solid var(--links_bordas);
+    transition: .5s;
+}
+
+.technology-used:hover {
+    color: black;
+    background-color: var(--texto_secundario_hover);
+    border: 1px solid var(--links_bordas);
+}
+
+.icons-contato {
+    color: var(--texto_secundario_hover);
+    margin-bottom: 20px;
+}
+
+.container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+.container.visible {
+opacity: 1;
+transform: translateY(0);
 }
