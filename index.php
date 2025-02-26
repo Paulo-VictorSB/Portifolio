@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paulo Barbosa Dev</title>
+    <link rel="shortcut icon" href="app/src/icons/P.ico" type="image/x-icon">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app/css/style.css">
     <!-- Font-Aewsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -17,15 +18,19 @@
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- Js -->
+    <script src="app/js/app.js"></script>
 </head>
-
 <body>
+
+    <div id="mensagem" class="ms-3 py-2 px-2" style="display:none; position: fixed; top: 20px; right: -500px; z-index: 999;">
+        
+    </div>
 
     <header>
         <div class="container">
             <div class="row mt-2 align-items-center">
                 <div class="col text-center d-none d-md-block">
-                    <!-- Links do menu (visíveis em telas médias ou maiores) -->
                     <a href="#sobre" class="text-decoration-none mx-2">Sobre mim</a>
                     <a href="#container-carousel" class="text-decoration-none mx-2">Tecnologias</a>
                     <a href="#formacao" class="text-decoration-none mx-2">Formação</a>
@@ -33,7 +38,6 @@
                     <a href="#contato" class="text-decoration-none mx-2">Contato</a>
                 </div>
 
-                <!-- Ícone do menu hambúrguer (visível em telas menores) -->
                 <div class="col d-md-none text-end">
                     <button id="menu-toggle" class="btn btn-primary">
                         <i class="fas fa-bars"></i>
@@ -41,7 +45,6 @@
                 </div>
             </div>
 
-            <!-- Menu hambúrguer (inicialmente oculto) -->
             <div id="mobile-menu" class="d-md-none text-center mt-3" style="display: none;">
                 <a href="#sobre" class="text-decoration-none d-block my-2">Sobre mim</a>
                 <a href="#container-carousel" class="text-decoration-none d-block my-2">Tecnologias</a>
@@ -49,7 +52,6 @@
                 <a href="#projetos" class="text-decoration-none d-block my-2">Projetos</a>
                 <a href="#contato" class="text-decoration-none d-block my-2">Contato</a>
             </div>
-
             <hr>
         </div>
     </header>
@@ -57,7 +59,7 @@
     <div class="container" id="sobre">
         <div class="row">
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center p-0">
-                <img id="img-perfil" src="WhatsApp Image 2025-01-07 at 08.39.11(1).png" alt="Imagem de perfil"
+                <img id="img-perfil" src="app/src/perfil.png" alt="Imagem de perfil"
                     style="max-height: 50%;">
             </div>
 
@@ -71,7 +73,7 @@
                         intensivamente como freelancer, entregando soluções completas e personalizadas para clientes.
                     </p>
                     <div id="downloads" class="text-lg-start text-center">
-                        <a href="PAULO BARBOSA.docx" class="btn text-white"><i class="fa-solid fa-file"></i> CV</a>
+                        <a href="app/src/PAULO BARBOSA.docx" class="btn text-white"><i class="fa-solid fa-file"></i> CV</a>
                         <a href="https://www.linkedin.com/in/paulo-victorsb/" target="_blank" class="btn text-white"><i
                                 class="fa-brands fa-linkedin"></i> Linkedin</a>
                         <a href="https://github.com/Paulo-VictorSB" target="_blank" class="btn text-white"><i
@@ -87,78 +89,76 @@
         <div id="carousel-wrapper">
             <h3 class="text-center pb-5 fw-bold">Tecnologias</h3>
             <div id="row-carousel" class="carousel-track pb-5">
-                <!-- Imagens do carrossel -->
                 <div class="col carrossel-element text-center text-white">
-                    <img src="html5.png" alt="HTML5" class="img-fluid">
+                    <img src="app/src/icons/html.png" alt="HTML5" class="img-fluid">
                     <h6>HTML</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="css-3 (1).png" alt="CSS3" class="img-fluid">
+                    <img src="app/src/icons/css.png" alt="CSS3" class="img-fluid">
                     <h6>CSS</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="bootstrap.png" alt="Bootstrap" class="img-fluid">
+                    <img src="app/src/icons/bootstrap.png" alt="Bootstrap" class="img-fluid">
                     <h6>Bootstrap</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="js (1).png" alt="JavaScript" class="img-fluid">
+                    <img src="app/src/icons/js.png" alt="JavaScript" class="img-fluid">
                     <h6>JavaScript</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="social.png" alt="jQuery" class="img-fluid">
+                    <img src="app/src/icons/social.png" alt="jQuery" class="img-fluid">
                     <h6>jQuery</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="php (1).png" alt="PHP" class="img-fluid">
+                    <img src="app/src/icons/php.png" alt="PHP" class="img-fluid">
                     <h6>Php</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="mysql.png" alt="MySQL" class="img-fluid">
+                    <img src="app/src/icons/mysql.png" alt="MySQL" class="img-fluid">
                     <h6>MySQL</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="mesclar-git.png" alt="Git" class="img-fluid">
+                    <img src="app/src/icons/git.png" alt="Git" class="img-fluid">
                     <h6>Git</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="github (1).png" alt="GitHub" class="img-fluid">
+                    <img src="app/src/icons/github.png" alt="GitHub" class="img-fluid">
                     <h6>GitHub</h6>
                 </div>
-                <!-- Imagens duplicadas para efeito de loop -->
                 <div class="col carrossel-element text-center text-white">
-                    <img src="html5.png" alt="HTML5" class="img-fluid">
+                    <img src="app/src/icons/html.png" alt="HTML5" class="img-fluid">
                     <h6>HTML</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="css-3 (1).png" alt="CSS3" class="img-fluid">
+                    <img src="app/src/icons/css.png" alt="CSS3" class="img-fluid">
                     <h6>CSS</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="bootstrap.png" alt="Bootstrap" class="img-fluid">
+                    <img src="app/src/icons/bootstrap.png" alt="Bootstrap" class="img-fluid">
                     <h6>Bootstrap</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="js (1).png" alt="JavaScript" class="img-fluid">
-                    <h6>JavasCript</h6>
+                    <img src="app/src/icons/js.png" alt="JavaScript" class="img-fluid">
+                    <h6>JavaScript</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="social.png" alt="jQuery" class="img-fluid">
+                    <img src="app/src/icons/social.png" alt="jQuery" class="img-fluid">
                     <h6>jQuery</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="php (1).png" alt="PHP" class="img-fluid">
+                    <img src="app/src/icons/php.png" alt="PHP" class="img-fluid">
                     <h6>Php</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="mysql.png" alt="MySQL" class="img-fluid">
+                    <img src="app/src/icons/mysql.png" alt="MySQL" class="img-fluid">
                     <h6>MySQL</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="mesclar-git.png" alt="Git" class="img-fluid">
+                    <img src="app/src/icons/git.png" alt="Git" class="img-fluid">
                     <h6>Git</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
-                    <img src="github (1).png" alt="GitHub" class="img-fluid">
+                    <img src="app/src/icons/github.png" alt="GitHub" class="img-fluid">
                     <h6>GitHub</h6>
                 </div>
             </div>
@@ -227,7 +227,7 @@
                         <h4>KeyWorlds - App!</h4>
                     </div>
                     <div class="card-body">
-                        <img src="Screenshot_94.png" alt="" class="img-fluid border border-dark rounded">
+                        <img src="app/src/images/keyworlds.png" alt="" class="img-fluid border border-dark rounded">
                         <p class="my-3">KeyWorlds é um jogo desenvolvido para testar e aprimorar sua digitação e
                             reconhecimento de caracteres. O desafio consiste em digitar corretamente as sequências
                             exibidas na tela, compostas por letras maiúsculas, minúsculas, números e caracteres
@@ -264,7 +264,7 @@
                         <h4>GERContatos</h4>
                     </div>
                     <div class="card-body">
-                        <img src="Screenshot_95.png" alt="" class="img-fluid border border-dark rounded">
+                        <img src="app/src/images/GERcontatos.png" alt="" class="img-fluid border border-dark rounded">
                         <p class="my-3">Um app de gerenciamento de contatos permite adicionar, editar, excluir e
                             pesquisar contatos de forma simples. Além disso, oferece a opção de exportar a lista de
                             contatos para um arquivo CSV, facilitando o backup e a transferência de dados.</p>
@@ -300,7 +300,7 @@
                         <h4>Weather-App</h4>
                     </div>
                     <div class="card-body">
-                        <img src="Screenshot_96.png" alt="" class="img-fluid border border-dark rounded">
+                        <img src="app/src/images/weatherapp.png" alt="" class="img-fluid border border-dark rounded">
                         <p class="my-3">O Weather-App é um projeto desenvolvido com HTML, CSS e JavaScript, que utiliza
                             uma API gratuita de previsão do tempo para fornecer informações atualizadas sobre o clima. O
                             aplicativo permite ao usuário consultar a temperatura, condições climáticas e outros dados
@@ -334,7 +334,7 @@
                         <h4>GERContatos</h4>
                     </div>
                     <div class="card-body">
-                        <img src="Screenshot_97.png" alt="" class="img-fluid border border-dark rounded">
+                        <img src="app/src/images/RESTapicountry.png" alt="" class="img-fluid border border-dark rounded">
                         <p class="my-3">Bem-vindo ao repositório Visualizador de Informações de Países via REST API!
                             Este projeto permite aos usuários explorar informações detalhadas sobre países, consumindo
                             uma REST API. A aplicação é desenvolvida em PHP e Bootstrap, proporcionando uma interface
@@ -412,24 +412,24 @@
             <form method="post">
                 <div class="row g-3">
                     <div class="col-12 col-md-6">
-                        <label for="name" class="form-label">Nome</label>
+                        <label for="name" class="form-label"><p>Nome</p></label>
                         <input type="text" name="name" id="name" class="form-control" placeholder="Seu nome" required>
                     </div>
 
                     <div class="col-12 col-md-6">
-                        <label for="email" class="form-label">E-mail</label>
+                        <label for="email" class="form-label"><p>E-mail</p></label>
                         <input type="email" name="email" id="email" class="form-control" placeholder="seu@email.com"
                             required>
                     </div>
 
                     <div class="col-12">
-                        <label for="mensagem" class="form-label">Mensagem</label>
-                        <textarea name="mensagem" id="mensagem" rows="4" class="form-control"
+                        <label for="mensagem" class="form-label"><p>Mensagem</p></label>
+                        <textarea name="mensagem" id="mensagemform" rows="4" class="form-control"
                             placeholder="Sua mensagem..." required></textarea>
                     </div>
 
                     <div class="col-12 text-center mt-3">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" class="btn btn-primary" id="enviar_mensagem">Enviar</button>
                     </div>
                 </div>
             </form>
@@ -442,14 +442,14 @@
     <div class="container">
         <div class="row py-3">
             <div class="col text-center">
-                <h5>Paulo Barbosa &copy; 2025</h5>
+                <h5>Paulo Barbosa &copy; 2025 - <?= DATE('Y')?></h5>
             </div>
         </div>
     </div>
 
     <button id="btn-topo" class="btn btn-primary"
         style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 999;">
-        ↑ Topo
+        <i class="fa-solid fa-arrow-up"></i>
     </button>
 
 
@@ -457,47 +457,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const containers = document.querySelectorAll(".container");
-
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add("visible");
-                        }
-                    });
-                },
-                { threshold: 0.1 } // Ativa quando 10% da section aparecer na tela
-            );
-
-            console.log(IntersectionObserver);
-            containers.forEach((section) => {
-                observer.observe(section);
-            });
-        });
-
-        $(document).ready(function () {
-            $("#menu-toggle").click(function () {
-                $("#mobile-menu").slideToggle(300); // Animação suave de 300ms
-            });
-
-        });
-
-        $(window).scroll(function () {
-            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 10) {
-                $('#btn-topo').fadeIn(300); // Aparece suavemente
-            } else {
-                $('#btn-topo').fadeOut(300); // Some suavemente
-            }
-        });
-
-        // Rola suavemente até o topo ao clicar no botão
-        $('#btn-topo').click(function () {
-            $('html, body').animate({ scrollTop: 0 }, 600); // Animação de 600ms
-        });
-    </script>
 </body>
 
 </html>
