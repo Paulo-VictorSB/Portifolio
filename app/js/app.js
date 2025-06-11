@@ -63,16 +63,13 @@ $(document).ready(() => {
                         if (respostaDados.erro.mensagem) mensagemErro += `${respostaDados.erro.mensagem}\n`;
 
                         $('#mensagem').text(mensagemErro);
-                        $('#mensagem').removeClass('bg-success border border-success rounded text-white')
-                        $('#mensagem').addClass('bg-danger border border-danger rounded text-white')
+                        $('#mensagem').removeClass('bg-success border border-success rounded text-white');
+                        $('#mensagem').addClass('bg-danger border border-danger rounded text-white');
                         $('#mensagem').fadeIn(300);
-                        $('#mensagem').animate({
-                            right: '20px'
-                        }, 500);
+                        $('#mensagem').animate({ right: '20px' }, 500);
                         setTimeout(function () {
                             $('#mensagem').fadeOut(300);
                         }, 2000);
-
                     } else {
                         alert(respostaDados.resposta);
                     }
@@ -80,12 +77,10 @@ $(document).ready(() => {
                 }
 
                 $('#mensagem').text("Mensagem enviada com sucesso!");
-                $('#mensagem').removeClass('bg-danger border border-danger rounded text-white')
-                $('#mensagem').addClass('bg-success border border-success rounded text-white')
+                $('#mensagem').removeClass('bg-danger border border-danger rounded text-white');
+                $('#mensagem').addClass('bg-success border border-success rounded text-white');
                 $('#mensagem').fadeIn(300);
-                $('#mensagem').animate({
-                    right: '20px'
-                }, 500);
+                $('#mensagem').animate({ right: '20px' }, 500);
                 setTimeout(function () {
                     $('#mensagem').fadeOut(300);
                 }, 2000);
@@ -95,13 +90,20 @@ $(document).ready(() => {
                 $('#mensagemform').val('');
             },
             error: function (xhr, status, erro) {
+                // Agora tratando o erro com os parâmetros recebidos na função 'error'
                 console.error('Erro ao enviar a mensagem:', erro);
-                alert(`Erro: ${erro}`);
+
+                let mensagemErro = 'Ocorreu um erro ao enviar a mensagem.';
+
+                $('#mensagem').text(mensagemErro);
+                $('#mensagem').removeClass('bg-success border border-success rounded text-white');
+                $('#mensagem').addClass('bg-danger border border-danger rounded text-white');
+                $('#mensagem').fadeIn(300);
+                $('#mensagem').animate({ right: '20px' }, 500);
+                setTimeout(function () {
+                    $('#mensagem').fadeOut(300);
+                }, 2000);
             }
         });
     }
-
-})
-
-
-
+});

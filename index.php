@@ -21,10 +21,11 @@
     <!-- Js -->
     <script src="app/js/app.js"></script>
 </head>
+
 <body>
 
     <div id="mensagem" class="ms-3 py-2 px-2" style="display:none; position: fixed; top: 20px; right: -500px; z-index: 999;">
-        
+
     </div>
 
     <header>
@@ -118,12 +119,24 @@
                     <h6>MySQL</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
+                    <img src="app/src/icons/laravel.svg" alt="Laravel" class="img-fluid">
+                    <h6>Laravel</h6>
+                </div>
+                <div class="col carrossel-element text-center text-white">
                     <img src="app/src/icons/git.png" alt="Git" class="img-fluid">
                     <h6>Git</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
                     <img src="app/src/icons/github.png" alt="GitHub" class="img-fluid">
                     <h6>GitHub</h6>
+                </div>
+                <div class="col carrossel-element text-center text-white">
+                    <img src="app/src/icons/scrum.png" alt="Scrum" class="img-fluid">
+                    <h6>Scrum</h6>
+                </div>
+                <div class="col carrossel-element text-center text-white">
+                    <img src="app/src/icons/cloud-api.png" alt="Api" class="img-fluid">
+                    <h6>Api</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
                     <img src="app/src/icons/html.png" alt="HTML5" class="img-fluid">
@@ -152,6 +165,10 @@
                 <div class="col carrossel-element text-center text-white">
                     <img src="app/src/icons/mysql.png" alt="MySQL" class="img-fluid">
                     <h6>MySQL</h6>
+                </div>
+                <div class="col carrossel-element text-center text-white">
+                    <img src="app/src/icons/laravel.svg" alt="Laravel" class="img-fluid">
+                    <h6>Laravel</h6>
                 </div>
                 <div class="col carrossel-element text-center text-white">
                     <img src="app/src/icons/git.png" alt="Git" class="img-fluid">
@@ -220,7 +237,86 @@
         <div class="row fw-bold text-center">
             <h3>Projetos</h3>
         </div>
+        <div class="row mb-3">
+
+
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                <div class="card border-dark">
+                    <div class="card-header text-center">
+                        <h4>PapoLive</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="app/src/images/PapoLive.png" alt="" class="img-fluid border border-dark rounded">
+                        <p class="my-3">PapoLive é um sistema de chat em tempo real que permite a criação de usuários e salas com ou sem senha, garantindo segurança e privacidade.
+
+                            Desenvolvido com PHP (API RESTful), JavaScript (Fetch/AJAX), Bootstrap e MySQL, o sistema oferece uma experiência fluida e responsiva, com gerenciamento de sessões e interface intuitiva para qualquer dispositivo.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row my-3">
+                            <div class="col">
+                                <button class="technology-used rounded py-1 px-3 m-1 m-lg-0">Php</button>
+                                <button class="technology-used rounded py-1 px-3 m-1 m-lg-0">Ajax</button>
+                                <button class="technology-used rounded py-1 px-3 m-1 m-lg-0">CSS</button>
+                                <button class="technology-used rounded py-1 px-3 m-1 m-lg-0">Bootstrap</button>
+                                <button class="technology-used rounded py-1 px-3 m-1 m-lg-0">MySQL</button>
+                                <button class="technology-used rounded py-1 px-3 m-1 m-lg-0">APIRestful</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-flex flex-column flex-md-row">
+                                <a href="https://pbarbosaprojetos.byethost31.com/"
+                                    class="technology-used flex-grow-1 rounded px-3 m-1 text-decoration-none"
+                                    target="_blank"><i class="fa-solid fa-link"></i> Acessar</a>
+                                <a href="https://github.com/Paulo-VictorSB/PapoLive"
+                                    class="technology-used flex-grow-1 rounded px-3 m-1 text-decoration-none"
+                                    target="_blank"><i class="fa-solid fa-code"></i> Repositório</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Encurtei -->
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                <div class="card border-dark">
+                    <div class="card-header text-center">
+                        <h4>Encurtei Online</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="app/src/images/EncurteiOnline.png" alt="" class="img-fluid border border-dark rounded">
+                        <p class="my-3">Encurtei é um encurtador de links 100% gratuito, criado para facilitar o compartilhamento de URLs de forma rápida, segura e profissional.
+
+                            Com encurtamento instantâneo, links personalizáveis e suporte a HTTPS, a ferramenta funciona sem cadastro e garante links permanentes — ideais para campanhas, QR Codes, redes sociais e muito mais.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row my-3">
+                            <div class="col">
+                                <button class="technology-used rounded py-1 px-3 m-1 m-lg-0">Php</button>
+                                <button class="technology-used rounded py-1 px-3 m-1 m-lg-0">Ajax</button>
+                                <button class="technology-used rounded py-1 px-3 m-1 m-lg-0">CSS</button>
+                                <button class="technology-used rounded py-1 px-3 m-1 m-lg-0">Bootstrap</button>
+                                <button class="technology-used rounded py-1 px-3 m-1 m-lg-0">MySQL</button>
+                                <button class="technology-used rounded py-1 px-3 m-1 m-lg-0">APIRestful</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-flex flex-column flex-md-row">
+                                <a href="https://encurtei.online/"
+                                    class="technology-used flex-grow-1 rounded px-3 m-1 text-decoration-none"
+                                    target="_blank"><i class="fa-solid fa-link"></i> Acessar</a>
+                                <a href="https://github.com/Paulo-VictorSB/encurtei"
+                                    class="technology-used flex-grow-1 rounded px-3 m-1 text-decoration-none"
+                                    target="_blank"><i class="fa-solid fa-code"></i> Repositório</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
         <div class="row">
+
+
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
                 <div class="card border-dark">
                     <div class="card-header text-center">
@@ -292,8 +388,12 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
         <div class="row">
+
+
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center mt-3">
                 <div class="card border-dark">
                     <div class="card-header text-center">
@@ -363,6 +463,8 @@
                     </div>
                 </div>
             </div>
+
+            
         </div>
         <a href="https://github.com/Paulo-VictorSB?tab=repositories" target="_blank">Veja mais no meu Github!</a>
         <hr>
@@ -412,18 +514,24 @@
             <form method="post">
                 <div class="row g-3">
                     <div class="col-12 col-md-6">
-                        <label for="name" class="form-label"><p>Nome</p></label>
+                        <label for="name" class="form-label">
+                            <p>Nome</p>
+                        </label>
                         <input type="text" name="name" id="name" class="form-control" placeholder="Seu nome" required>
                     </div>
 
                     <div class="col-12 col-md-6">
-                        <label for="email" class="form-label"><p>E-mail</p></label>
+                        <label for="email" class="form-label">
+                            <p>E-mail</p>
+                        </label>
                         <input type="email" name="email" id="email" class="form-control" placeholder="seu@email.com"
                             required>
                     </div>
 
                     <div class="col-12">
-                        <label for="mensagem" class="form-label"><p>Mensagem</p></label>
+                        <label for="mensagem" class="form-label">
+                            <p>Mensagem</p>
+                        </label>
                         <textarea name="mensagem" id="mensagemform" rows="4" class="form-control"
                             placeholder="Sua mensagem..." required></textarea>
                     </div>
@@ -442,7 +550,7 @@
     <div class="container">
         <div class="row py-3">
             <div class="col text-center">
-                <h5>Paulo Barbosa &copy; 2025 - <?= DATE('Y')?></h5>
+                <h5>Paulo Barbosa &copy; 2025 - <?= DATE('Y') ?></h5>
             </div>
         </div>
     </div>

@@ -1,10 +1,19 @@
 <?php
 
-require_once __DIR__ . '/../config/database.php';
-require_once __DIR__ . '/../config/config.php';
+define('MYSQL_CONFIG', [
+    'host' => 'localhost',
+    'database' => 'u271434508_mensagem',
+    'username' => 'u271434508_admin',
+    'password' => 'P@ul0.V17'
+]);
+
+require_once (__DIR__ . '/../config/database.php');
 
 use App\Config\Database;
+
+
 $database = new Database(MYSQL_CONFIG);
+
 
 $input = json_decode(file_get_contents('php://input'), true);
 
@@ -28,7 +37,7 @@ if ($nomeValido && $emailValido && $mensagemValida) {
         ':mensagem' => $mensagem
     ];
 
-    $adicionar_banco = $database->execute_non_query('INSERT INTO mensagem (nome, email, mensagem) VALUES (:nome, :email, :mensagem)', $params);
+    $adicionar_banco = $database->execute_non_query('INSERT INTO mensagem (id, nome, email, mensagem) VALUES (0, :nome, :email, :mensagem)', $params);
     
 } else {
     http_response_code(400);
